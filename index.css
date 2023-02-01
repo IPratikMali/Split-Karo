@@ -1,0 +1,153 @@
+.name{
+    height: 150px;
+    background: #ade0ab;
+}
+.container{
+    width: auto;
+    height: auto;
+    background: #005B9A;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container1{
+    height: auto;
+    width: 495px;
+    background: #AAE3E2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.start{
+    height: 400px;
+    width: 360px;
+    background: #E8E2E2;
+    margin-top: 25px;
+    margin-bottom: 20px;
+   
+}
+.start-question{
+    height: 120px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #005B9A;
+}
+.count{
+    height: 120px;
+    margin-top: 30px;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bill1{
+    height: 200px;
+    width: 360px;
+    background: #E8E2E2;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.bill2{
+    height: 200px;
+    width: 360px;
+    background: #c85858;
+    margin-bottom: 20px;
+}
+.bill3{
+    height: 200px;
+    width: 360px;
+    background: #f60000;
+    margin-bottom: 20px;
+}
+.bill4{
+    height: 200px;
+    width: 360px;
+    background: #a6f30d;
+    margin-bottom: 20px;
+}
+.bill5{
+    height: 200px;
+    width: 360px;
+    background: #7165f4;
+    margin-bottom: 20px;
+}
+.calculate{
+    height: 90px;
+    width: 360px;
+    background: #ade0ab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form1{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#name-input{
+    height: 30px;
+    width: 170px;
+    margin-bottom: 10px;
+}
+#money-input{
+    height: 30px;
+    width: 170px;
+    margin-bottom: 10px;
+}
+#money{
+    height: 30px;
+    width: 170px;
+    margin-bottom: 10px;
+    border-bottom: none;
+}
+#button{
+    height: 50px;
+    width: 200px;
+    background: #645CBB;
+    color: #E8E2E2;
+    font-size: larger;
+    border-radius: 10px;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    box-shadow:  2px 2px 10px #282e33;
+}
+#button:hover{
+    box-shadow:  2px 1px 10px #282e33 , 2px 1px 10px #7c33db,
+    2px 1px 10px #30e792, 2px 1px 10px #5398d0
+}
+#count-btn{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: x-large;
+    border-radius: 4px;
+    color: aliceblue;
+    background: #005B9A ;
+}
+#count-btn:hover{
+    box-shadow:  5px 5px 10px #00243e,
+    -1px -1px 10px #0092f6;
+}
+
+#ppl-count{
+    height: 50px;
+    width: 160px;
+    font-size: larger;
+    text-align: center;
+}
+#submit-btn{
+    height: 60px;
+    width: 180px;
+    font-size: 25px;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    background: #8EA7E9;
+    box-shadow:  2px 2px 10px #282e33
+
+}
+#submit-btn:hover{
+    box-shadow:  5px 5px 10px #5f6e83
+}
