@@ -51,30 +51,35 @@
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
+    display: none;
 }
 .bill2{
     height: 200px;
     width: 360px;
     background: #c85858;
     margin-bottom: 20px;
+    display: none;
 }
 .bill3{
     height: 200px;
     width: 360px;
     background: #f60000;
     margin-bottom: 20px;
+    display: none;
 }
 .bill4{
     height: 200px;
     width: 360px;
     background: #a6f30d;
     margin-bottom: 20px;
+    display: none;
 }
 .bill5{
     height: 200px;
     width: 360px;
     background: #7165f4;
     margin-bottom: 20px;
+    display: none;
 }
 .calculate{
     height: 90px;
@@ -83,27 +88,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
+}
+.solution{
+    height: 400px;
+    width: 360px;
+    background: #E8E2E2;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: none;
 }
 .form1{
     margin-top: 10px;
     margin-left: 20px;
 }
-#name-input{
+.name-input{
     height: 30px;
     width: 170px;
     margin-bottom: 10px;
 }
-#money-input{
+.money-input{
     height: 30px;
     width: 170px;
     margin-bottom: 10px;
 }
-#money{
-    height: 30px;
-    width: 170px;
-    margin-bottom: 10px;
-    border-bottom: none;
-}
+
 #button{
     height: 50px;
     width: 200px;
@@ -118,7 +127,7 @@
     box-shadow:  2px 1px 10px #282e33 , 2px 1px 10px #7c33db,
     2px 1px 10px #30e792, 2px 1px 10px #5398d0
 }
-#count-btn{
+#count-btn-minus{
     height: 50px;
     width: 50px;
     margin-left: 20px;
@@ -128,7 +137,22 @@
     color: aliceblue;
     background: #005B9A ;
 }
-#count-btn:hover{
+#count-btn-minus:hover{
+    box-shadow:  5px 5px 10px #00243e,
+    -1px -1px 10px #0092f6;
+}
+#count-btn-plus{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: x-large;
+    border-radius: 4px;
+    color: aliceblue;
+    background: #005B9A ;
+
+}
+#count-btn-plus:hover{
     box-shadow:  5px 5px 10px #00243e,
     -1px -1px 10px #0092f6;
 }
@@ -150,4 +174,8 @@
 }
 #submit-btn:hover{
     box-shadow:  5px 5px 10px #5f6e83
+}
+#heading{
+    color: #00243e;
+    font-size: 30px;
 }
