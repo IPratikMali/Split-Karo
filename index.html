@@ -3,70 +3,80 @@
 
 <head>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Split-Karo</title>
     <link rel="website icon" type="png" href="">
+    <script src="index.js"></script>
 </head>
 
 <body>
     <div class="name">
-
+        <h1 id="heading">
+            hey
+        </h1>
     </div>
     <div class="container">
         <div class="container1">
-            <div class="start">
+            <div class="start" id="start">
                 <div class="start-question">
                     <p class="question">How many people are in your group?</p>
                 </div>
                 <div class="count">
-                    <input type="button" value="-" id="count-btn">
+                    <input type="button" value="-" id="count-btn-minus" onclick="minuscount()">
                     <input type="text" name="count" id="ppl-count" value="3">
-                    <input type="button" value="+" id="count-btn">
+                    <input type="button" value="+" id="count-btn-plus" onclick="pluscount()">
                 </div>
                 <div class="submit">
-                    <input type="button" value="Let's GO" id="submit-btn">
+                    <input type="button" value="Let's GO" id="submit-btn" onclick="submit()">
                 </div>
             </div>
-            <div class="bill1">
+            <div class="bill1" id="bill1">
                 <form class="form1">
-                    <input type="text" name="Name" id="name-input" placeholder="Enter Name">
-                    <input type="text" name="Money" id="money-input" placeholder="How much ?">
-                    <p> Rs. <span id="rs-span"> </span></p>
+                    <input type="text" name="Name" class="name-input" id="name-input1" placeholder="Enter Name">
+                    <input type="text" name="Money" class="money-input" id="money-input1" placeholder="How much ?"
+                        oninput="getvalue()" >
+                    <p> Rs. <span id="rs-span1"> </span></p>
                 </form>
             </div>
-            <div class="bill2">
+            <div class="bill2" id="bill2">
                 <form class="form1">
-                    <input type="text" name="Name" id="name-input" placeholder="Enter Name">
-                    <input type="text" name="Money" id="money-input" placeholder="How much ?">
-                    <p> Rs. <span id="rs-span"> </span></p>
+                    <input type="text" name="Name" class="name-input" id="name-input2" placeholder="Enter Name">
+                    <input type="text" name="Money" class="money-input" id="money-input2" placeholder="How much ?"
+                        oninput="getvalue()" >
+                    <p> Rs. <span id="rs-span2"> </span></p>
                 </form>
             </div>
             <div class="bill3">
                 <form class="form1">
-                    <input type="text" name="Name" id="name-input" placeholder="Enter Name">
-                    <input type="text" name="Money" id="money-input" placeholder="How much ?">
-                    <p> Rs. <span id="rs-span"> </span></p>
+                    <input type="text" name="Name" class="name-input" id="name-input3" placeholder="Enter Name">
+                    <input type="text" name="Money" class="money-input" id="money-input3" placeholder="How much ?"
+                        >
+                    <p> Rs. <span id="rs-span3"> </span></p>
                 </form>
             </div>
             <div class="bill4">
                 <form class="form1">
-                    <input type="text" name="Name" id="name-input" placeholder="Enter Name">
-                    <input type="text" name="Money" id="money-input" placeholder="How much ?">
-                    <p> Rs. <span id="rs-span"> </span></p>
+                    <input type="text" name="Name" class="name-input" id="name-input4" placeholder="Enter Name">
+                    <input type="text" name="Money" class="money-input" id="money-input4" placeholder="How much ?"
+                        >
+                    <p> Rs. <span id="rs-span4"> </span></p>
                 </form>
             </div>
             <div class="bill5">
                 <form class="form1">
-                    <input type="text" name="Name" id="name-input" placeholder="Enter Name">
-                    <input type="text" name="Money" id="money-input" placeholder="How much ?">
-                    <p> Rs. <span id="rs-span"> </span></p>
+                    <input type="text" name="Name" class="name-input" id="name-input5" placeholder="Enter Name">
+                    <input type="text" name="Money" class="money-input" id="money-input5" placeholder="How much ?"
+                        >
+                    <p> Rs. <span id="rs-span5"> </span></p>
                 </form>
             </div>
-            <div class="calculate">
-                <input type="button" value="Calculate" id="button">
+            <div class="calculate" id="calculate">
+                <input type="button" value="Calculate" id="button" onclick="calci()">
+            </div>
+            <div class="solution" id="solution">
+                <h1 id="result"></h1>
             </div>
         </div>
 
