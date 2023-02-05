@@ -34,7 +34,8 @@
             </div>
             <div class="bill1" id="bill1">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input1" placeholder="Enter Name">
+                    <input type="text" name="Name" class="name-input" id="name-input1" placeholder="Enter Name" oninput="getname()">
+                    <p id="warning"></p>
                     <input type="text" name="Money" class="money-input" id="money-input1" placeholder="How much ?"
                         oninput="getvalue()" >
                     <p> Rs. <span id="rs-span1"> </span></p>
@@ -43,31 +44,35 @@
             <div class="bill2" id="bill2">
                 <form class="form1">
                     <input type="text" name="Name" class="name-input" id="name-input2" placeholder="Enter Name">
+                    <p id="warning2"></p>
                     <input type="text" name="Money" class="money-input" id="money-input2" placeholder="How much ?"
                         oninput="getvalue()" >
                     <p> Rs. <span id="rs-span2"> </span></p>
                 </form>
             </div>
-            <div class="bill3">
+            <div class="bill3" id="bill3">
                 <form class="form1">
                     <input type="text" name="Name" class="name-input" id="name-input3" placeholder="Enter Name">
-                    <input type="text" name="Money" class="money-input" id="money-input3" placeholder="How much ?"
+                    <p id="warning3"></p>
+                    <input type="text" name="Money" class="money-input" id="money-input3" placeholder="How much ?" oninput="getvalue()"
                         >
                     <p> Rs. <span id="rs-span3"> </span></p>
                 </form>
-            </div>
-            <div class="bill4">
+            </div> 
+            <div class="bill4" id="bill4">
                 <form class="form1">
                     <input type="text" name="Name" class="name-input" id="name-input4" placeholder="Enter Name">
-                    <input type="text" name="Money" class="money-input" id="money-input4" placeholder="How much ?"
+                    <p id="warning4"></p>
+                    <input type="text" name="Money" class="money-input" id="money-input4" placeholder="How much ?" oninput="getvalue()"
                         >
                     <p> Rs. <span id="rs-span4"> </span></p>
                 </form>
             </div>
-            <div class="bill5">
+            <div class="bill5" id="bill5">
                 <form class="form1">
                     <input type="text" name="Name" class="name-input" id="name-input5" placeholder="Enter Name">
-                    <input type="text" name="Money" class="money-input" id="money-input5" placeholder="How much ?"
+                    <p id="warning5"></p>
+                    <input type="text" name="Money" class="money-input" id="money-input5" placeholder="How much ?" oninput="getvalue()"
                         >
                     <p> Rs. <span id="rs-span5"> </span></p>
                 </form>
@@ -77,6 +82,9 @@
             </div>
             <div class="solution" id="solution">
                 <h1 id="result"></h1>
+                <h1 id="result2"></h1>
+                <h1 id="result3"></h1>
+                <h1 id="equal"></h1>
             </div>
         </div>
 
