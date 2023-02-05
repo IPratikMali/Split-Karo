@@ -96,6 +96,8 @@
     background: #E8E2E2;
     margin-top: 25px;
     margin-bottom: 20px;
+    display : flex;
+    flex-direction: column;
     display: none;
 }
 .form1{
@@ -178,4 +180,13 @@
 #heading{
     color: #00243e;
     font-size: 30px;
+}
+#warning , #warning2 , #warning3{
+    display: none;
+}
+#result , #result2 , #result3{
+    display: none;
+}
+#equal{
+    display: none;
 }
