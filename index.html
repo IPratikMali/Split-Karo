@@ -27,6 +27,7 @@
                     <input type="button" value="-" id="count-btn-minus" onclick="minuscount()">
                     <input type="text" name="count" id="ppl-count" value="3">
                     <input type="button" value="+" id="count-btn-plus" onclick="pluscount()">
+                    <p id="warning1">Minimum : 2  / Maximum : 5</p>
                 </div>
                 <div class="submit">
                     <input type="button" value="Let's GO" id="submit-btn" onclick="submit()">
@@ -34,46 +35,46 @@
             </div>
             <div class="bill1" id="bill1">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input1" placeholder="Enter Name" oninput="getname()">
+                    <input type="text" name="Name" class="name-input" id="name-input1" placeholder="Enter Name"  autocomplete="off">
                     <p id="warning"></p>
                     <input type="text" name="Money" class="money-input" id="money-input1" placeholder="How much ?"
-                        oninput="getvalue()" >
+                        oninput="getvalue()"  autocomplete="off">
                     <p> Rs. <span id="rs-span1"> </span></p>
                 </form>
             </div>
             <div class="bill2" id="bill2">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input2" placeholder="Enter Name">
+                    <input type="text" name="Name" class="name-input" id="name-input2" placeholder="Enter Name" autocomplete="off">
                     <p id="warning2"></p>
                     <input type="text" name="Money" class="money-input" id="money-input2" placeholder="How much ?"
-                        oninput="getvalue()" >
+                        oninput="getvalue()"  autocomplete="off">
                     <p> Rs. <span id="rs-span2"> </span></p>
                 </form>
             </div>
             <div class="bill3" id="bill3">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input3" placeholder="Enter Name">
+                    <input type="text" name="Name" class="name-input" id="name-input3" placeholder="Enter Name" autocomplete="off">
                     <p id="warning3"></p>
                     <input type="text" name="Money" class="money-input" id="money-input3" placeholder="How much ?" oninput="getvalue()"
-                        >
+                         autocomplete="off">
                     <p> Rs. <span id="rs-span3"> </span></p>
                 </form>
             </div> 
             <div class="bill4" id="bill4">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input4" placeholder="Enter Name">
+                    <input type="text" name="Name" class="name-input" id="name-input4" placeholder="Enter Name" autocomplete="off">
                     <p id="warning4"></p>
                     <input type="text" name="Money" class="money-input" id="money-input4" placeholder="How much ?" oninput="getvalue()"
-                        >
+                         autocomplete="off">
                     <p> Rs. <span id="rs-span4"> </span></p>
                 </form>
             </div>
             <div class="bill5" id="bill5">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input5" placeholder="Enter Name">
+                    <input type="text" name="Name" class="name-input" id="name-input5" placeholder="Enter Name" autocomplete="off">
                     <p id="warning5"></p>
                     <input type="text" name="Money" class="money-input" id="money-input5" placeholder="How much ?" oninput="getvalue()"
-                        >
+                         autocomplete="off">
                     <p> Rs. <span id="rs-span5"> </span></p>
                 </form>
             </div>
@@ -81,11 +82,55 @@
                 <input type="button" value="Calculate" id="button" onclick="calci()">
             </div>
             <div class="solution" id="solution">
-                <h1 id="result"></h1>
-                <h1 id="result2"></h1>
-                <h1 id="result3"></h1>
-                <h1 id="result4"></h1>
-                <h1 id="equal"></h1>
+                <div id="topr">
+                    Who pays whom how much:
+                </div>
+                <div id="result">  
+                    <div id="firstr">
+                        <div id="who"></div>
+                    </div>
+                    <div id="secondr">
+                        <div id="owes"></div>
+                    </div>
+                    <div id="thirdr">
+                        <div id="whom"></div>
+                    </div>
+                </div>
+                <div id="result2">
+                    <div id="firstr">
+                        <div id="who2"></div>
+                    </div>
+                    <div id="secondr">
+                        <div id="owes2"></div>
+                    </div>
+                    <div id="thirdr">
+                        <div id="whom2"></div>
+                    </div>
+                </div>
+
+                <div id="result3">
+                    <div id="firstr">
+                        <div id="who3"></div>
+                    </div>
+                    <div id="secondr">
+                        <div id="owes3"></div>
+                    </div>
+                    <div id="thirdr">
+                        <div id="whom3"></div>
+                    </div>
+                </div>
+                <div id="result4">
+                    <div id="firstr">
+                        <div id="who4"></div>
+                    </div>
+                    <div id="secondr">
+                        <div id="owes4"></div>
+                    </div>
+                    <div id="thirdr">
+                        <div id="whom4"></div>
+                    </div>
+                </div>
+                <div id="equal"></div>
             </div>
         </div>
 
