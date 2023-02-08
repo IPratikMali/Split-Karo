@@ -86,23 +86,33 @@ let calci = () => {
                     ans = ans.toFixed(2);
                 }
                 document.getElementById("solution").style.display = "flex";
+                document.getElementById("equal").style.display = "none";
                 document.getElementById("result").style.display = "flex";
 
                 document.getElementById("who").innerHTML = name1;
-                document.getElementById("owes").innerHTML = ans + "  >";
+                document.getElementById("owes").innerHTML = ans;
                 document.getElementById("whom").innerHTML = name2;
             }
-            else {
+            else if(money2 < mid){
                 let ans = mid - money2;
                 if (ans % 1 !== 0) {
                     ans = ans.toFixed(2);
                 }
                 document.getElementById("solution").style.display = "flex";
+                document.getElementById("equal").style.display = "none";
                 document.getElementById("result").style.display = "flex";
 
                 document.getElementById("who").innerHTML = name2;
-                document.getElementById("owes").innerHTML = ans + "  >";
+                document.getElementById("owes").innerHTML = ans;
                 document.getElementById("whom").innerHTML = name1;
+            }
+            else{
+                document.getElementById("solution").style.display = "flex";
+                document.getElementById("result").style.display = "none";
+                document.getElementById("result2").style.display = "none";
+
+                document.getElementById("equal").style.display = "flex";
+                document.getElementById("equal").innerHTML = "Both Have Contributed Equally";
             }
         }
         else {
@@ -143,7 +153,18 @@ let calci = () => {
                 }
             }
 
-            if (max > 1) {
+            if(max == 0){
+                document.getElementById("solution").style.display = "flex";
+                document.getElementById("equal").style.display="none";
+                document.getElementById("result").style.display = "none";
+                document.getElementById("result2").style.display = "none";
+                document.getElementById("result3").style.display = "none";
+                document.getElementById("result4").style.display = "none";
+
+                document.getElementById("equal").style.display = "flex";
+                document.getElementById("equal").innerHTML = "All Are Contributed Equally";
+            }
+            else if (max > 1) {
                 if (money1 < mid) {
                     let ans1 = money2 - mid;
                     if (ans1 % 1 !== 0) {
@@ -154,6 +175,7 @@ let calci = () => {
                         ans2 = ans2.toFixed(2);
                     }
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display = "none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
 
@@ -162,7 +184,7 @@ let calci = () => {
                     document.getElementById("whom").innerHTML = name2;
 
                     document.getElementById("who2").innerHTML = name1;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name3;
                 }
                 else if (money2 < mid) {
@@ -175,15 +197,16 @@ let calci = () => {
                         ans2 = ans2.toFixed(2);
                     }
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display = "none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name2;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name1;
 
                     document.getElementById("who2").innerHTML = name2;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name3;
                 }
                 else {
@@ -196,15 +219,16 @@ let calci = () => {
                         ans2 = ans2.toFixed(2);
                     }
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display = "none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name3;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name1;
 
                     document.getElementById("who2").innerHTML = name3;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name2;
                 }
             }
@@ -219,15 +243,16 @@ let calci = () => {
                         ans2 = ans2.toFixed(2);
                     }
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display = "none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name2;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name1;
 
                     document.getElementById("who2").innerHTML = name3;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name1;
                 }
                 else if (money2 > mid) {
@@ -240,15 +265,16 @@ let calci = () => {
                         ans2 = ans2.toFixed(2);
                     }
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display = "none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name1;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name2;
                     
                     document.getElementById("who2").innerHTML = name3;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name2;
                 }
                 else {
@@ -261,15 +287,16 @@ let calci = () => {
                         ans2 = ans2.toFixed(2);
                     }
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display = "none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name1;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name3;
 
                     document.getElementById("who2").innerHTML = name2;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name3;
                 }
             }
@@ -320,8 +347,18 @@ let calci = () => {
                     max++;
                 }
             }
+            if(max == 0){
+                document.getElementById("solution").style.display = "flex";
+                document.getElementById("equal").style.display="none";
+                document.getElementById("result").style.display = "none";
+                document.getElementById("result2").style.display = "none";
+                document.getElementById("result3").style.display = "none";
+                document.getElementById("result4").style.display = "none";
 
-            if (max > 1) {
+                document.getElementById("equal").style.display = "flex";
+                document.getElementById("equal").innerHTML = "All Are Contributed Equally";
+            }
+            else if (max > 1) {
                 if (max > 2) {
                     if (money1 < mid) {
                         let ans1 = money2 - mid;
@@ -337,18 +374,22 @@ let calci = () => {
                             ans3 = ans3.toFixed(2);
                         }
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
 
                         document.getElementById("who").innerHTML = name1;
-                        document.getElementById("owes").innerHTML = ans1 + ">";
+                        document.getElementById("owes").innerHTML = ans1 ;
                         document.getElementById("whom").innerHTML = name2;
                       
                         document.getElementById("who2").innerHTML = name1;
-                        document.getElementById("owes2").innerHTML = ans2 + ">";
+                        document.getElementById("owes2").innerHTML = ans2 ;
                         document.getElementById("whom2").innerHTML = name3;
-                        document.getElementById("result3").innerHTML = `${name1} will give ${ans3} to ${name4}`;
+                        
+                        document.getElementById("who3").innerHTML = name1;
+                        document.getElementById("owes3").innerHTML = ans3 ;
+                        document.getElementById("whom3").innerHTML = name4;
                     }
                     else if (money2 < mid) {
                         let ans1 = money1 - mid;
@@ -364,18 +405,22 @@ let calci = () => {
                             ans3 = ans3.toFixed(2);
                         }
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
 
                         document.getElementById("who").innerHTML = name2;
-                        document.getElementById("owes").innerHTML = ans1 + ">";
+                        document.getElementById("owes").innerHTML = ans1 ;
                         document.getElementById("whom").innerHTML = name1;
 
                         document.getElementById("who2").innerHTML = name2;
-                        document.getElementById("owes2").innerHTML = ans2 + ">";
+                        document.getElementById("owes2").innerHTML = ans2 ;
                         document.getElementById("whom2").innerHTML = name3;
-                        document.getElementById("result3").innerHTML = `${name2} will give ${ans3} to ${name4}`;
+                   
+                        document.getElementById("who3").innerHTML = name2;
+                        document.getElementById("owes3").innerHTML = ans3 ;
+                        document.getElementById("whom3").innerHTML = name4;
                     }
                     else if (money3 < mid) {
                         let ans1 = money1 - mid;
@@ -391,18 +436,22 @@ let calci = () => {
                             ans3 = ans3.toFixed(2);
                         }
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
 
                         document.getElementById("who").innerHTML = name3;
-                        document.getElementById("owes").innerHTML = ans1 + ">";
+                        document.getElementById("owes").innerHTML = ans1 ;
                         document.getElementById("whom").innerHTML = name1;
                        
                         document.getElementById("who2").innerHTML = name3;
-                        document.getElementById("owes2").innerHTML = ans2 + ">";
+                        document.getElementById("owes2").innerHTML = ans2 ;
                         document.getElementById("whom2").innerHTML = name2;
-                        document.getElementById("result3").innerHTML = `${name3} will give ${ans3} to ${name4}`;
+                      
+                        document.getElementById("who3").innerHTML = name3;
+                        document.getElementById("owes3").innerHTML = ans3 ;
+                        document.getElementById("whom3").innerHTML = name4;
                     }
                     else {
                         let ans1 = money1 - mid;
@@ -418,18 +467,22 @@ let calci = () => {
                             ans3 = ans3.toFixed(2);
                         }
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
 
                         document.getElementById("who").innerHTML = name4;
-                        document.getElementById("owes").innerHTML = ans1 + ">";
+                        document.getElementById("owes").innerHTML = ans1 ;
                         document.getElementById("whom").innerHTML = name1;
                        
                         document.getElementById("who2").innerHTML = name4;
-                        document.getElementById("owes2").innerHTML = ans2 + ">";
+                        document.getElementById("owes2").innerHTML = ans2 ;
                         document.getElementById("whom2").innerHTML = name2;
-                        document.getElementById("result3").innerHTML = `${name4} will give ${ans3} to ${name3}`;
+                       
+                        document.getElementById("who3").innerHTML = name4;
+                        document.getElementById("owes3").innerHTML = ans3 ;
+                        document.getElementById("whom3").innerHTML = name3;
                     }
                 }
                 else {
@@ -445,28 +498,30 @@ let calci = () => {
 
                         if (ans1 == (money3 - mid)) {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name3;
                            
                             document.getElementById("who2").innerHTML = name2;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name4;
                         }
                         else {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name4;
                           
                             document.getElementById("who2").innerHTML = name2;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name3;
                         }
                     }
@@ -482,28 +537,30 @@ let calci = () => {
 
                         if (ans1 == (money2 - mid)) {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name2;
                             
                             document.getElementById("who2").innerHTML = name3;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name4;
                         }
                         else {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name4;
                           
                             document.getElementById("who2").innerHTML = name3;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name2;
                         }
                     }
@@ -519,28 +576,30 @@ let calci = () => {
 
                         if (ans1 == (money2 - mid)) {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name2;
                            
                             document.getElementById("who2").innerHTML = name4;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name3;
                         }
                         else {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name3;
                             
                             document.getElementById("who2").innerHTML = name4;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name2;
                         }
                     }
@@ -556,28 +615,30 @@ let calci = () => {
 
                         if (ans1 == (money1 - mid)) {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                            
                             document.getElementById("who2").innerHTML = name3;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name4;
                         }
                         else {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name4;
 
                             document.getElementById("who2").innerHTML = name3;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name1;
                         }
                     }
@@ -593,28 +654,30 @@ let calci = () => {
 
                         if (ans1 == (money1 - mid)) {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
 
                             document.getElementById("who2").innerHTML = name4;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name3;
                         }
                         else {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name3;
                            
                             document.getElementById("who2").innerHTML = name4;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name1;
                         }
                     }
@@ -630,28 +693,30 @@ let calci = () => {
 
                         if (ans1 == (money1 - mid)) {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name3;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             
                             document.getElementById("who2").innerHTML = name4;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name2;
                         }
                         else {
                             document.getElementById("solution").style.display = "flex";
+                            document.getElementById("equal").style.display="none";
                             document.getElementById("result").style.display = "flex";
                             document.getElementById("result2").style.display = "flex";
 
                             document.getElementById("who").innerHTML = name3;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name2;
                             
                             document.getElementById("who2").innerHTML = name4;
-                            document.getElementById("owes2").innerHTML = ans2 + ">";
+                            document.getElementById("owes2").innerHTML = ans2 ;
                             document.getElementById("whom2").innerHTML = name1;
                         }
                     }
@@ -677,18 +742,22 @@ let calci = () => {
                         ans3 = ans3.toFixed(2);
                     }
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display="none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
                     document.getElementById("result3").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name2;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name1;
                    
                     document.getElementById("who2").innerHTML = name3;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name1;
-                    document.getElementById("result3").innerHTML = `${name4} will give ${ans3} to ${name1}`;
+                  
+                    document.getElementById("who3").innerHTML = name4;
+                    document.getElementById("owes3").innerHTML = ans3 ;
+                    document.getElementById("whom3").innerHTML = name1;
                 }
                 else if (money2 > mid) {
                     let ans1 = mid - money1;
@@ -704,18 +773,22 @@ let calci = () => {
                         ans3 = ans3.toFixed(2);
                     }
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display="none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
                     document.getElementById("result3").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name1;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name2;
              
                     document.getElementById("who2").innerHTML = name3;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name2;
-                    document.getElementById("result3").innerHTML = `${name4} will give ${ans3} to ${name2}`;
+                    
+                    document.getElementById("who3").innerHTML = name4;
+                    document.getElementById("owes3").innerHTML = ans3 ;
+                    document.getElementById("whom3").innerHTML = name2;
                 }
                 else if (money3 > mid) {
                     let ans1 = mid - money1;
@@ -731,18 +804,22 @@ let calci = () => {
                         ans3 = ans3.toFixed(2);
                     }
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display="none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
                     document.getElementById("result3").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name1;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name3;
             
                     document.getElementById("who2").innerHTML = name2;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name3;
-                    document.getElementById("result3").innerHTML = `${name4} will give ${ans3} to ${name3}`;
+                    
+                    document.getElementById("who3").innerHTML = name4;
+                    document.getElementById("owes3").innerHTML = ans3 ;
+                    document.getElementById("whom3").innerHTML = name3;
                 }
                 else if (money4 > mid) {
                     let ans1 = mid - money1;
@@ -758,18 +835,22 @@ let calci = () => {
                         ans3 = ans3.toFixed(2);
                     }
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display="none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
                     document.getElementById("result3").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name1;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name4;
                  
                     document.getElementById("who2").innerHTML = name2;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name4;
-                    document.getElementById("result3").innerHTML = `${name3} will give ${ans3} to ${name4}`;
+              
+                    document.getElementById("who3").innerHTML = name3;
+                    document.getElementById("owes3").innerHTML = ans3 ;
+                    document.getElementById("whom3").innerHTML = name4;
                 }
             }
 
@@ -827,8 +908,18 @@ let calci = () => {
                     max++;
                 }
             }
+            if(max == 0){
+                document.getElementById("solution").style.display = "flex";
+                document.getElementById("equal").style.display="none";
+                document.getElementById("result").style.display = "none";
+                document.getElementById("result2").style.display = "none";
+                document.getElementById("result3").style.display = "none";
+                document.getElementById("result4").style.display = "none";
 
-            if (max == 1) {
+                document.getElementById("equal").style.display = "flex";
+                document.getElementById("equal").innerHTML = "All Are Contributed Equally";
+            }
+            else if (max == 1) {
                 if (money1 > mid) {
                     let ans1 = mid - money2;
                     if (ans1 % 1 !== 0) {
@@ -847,20 +938,27 @@ let calci = () => {
 
                     let ans4 = mid - money5;
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display="none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
                     document.getElementById("result3").style.display = "flex";
                     document.getElementById("result4").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name2;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name1;
                  
                     document.getElementById("who2").innerHTML = name3;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name1;
-                    document.getElementById("result3").innerHTML = `${name4} will give ${ans3} to ${name1}`;
-                    document.getElementById("result4").innerHTML = `${name5} will give ${ans4} to ${name1}`;
+                    
+                    document.getElementById("who3").innerHTML = name4;
+                    document.getElementById("owes3").innerHTML = ans3 ;
+                    document.getElementById("whom3").innerHTML = name1;
+                   
+                    document.getElementById("who4").innerHTML = name5;
+                    document.getElementById("owes4").innerHTML = ans4 ;
+                    document.getElementById("whom4").innerHTML = name1;
                 }
                 else if (money2 > mid) {
                     let ans1 = mid - money1;
@@ -880,20 +978,27 @@ let calci = () => {
 
                     let ans4 = mid - money5;
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display="none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
                     document.getElementById("result3").style.display = "flex";
                     document.getElementById("result4").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name1;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name2;
                    
                     document.getElementById("who2").innerHTML = name3;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name2;
-                    document.getElementById("result3").innerHTML = `${name4} will give ${ans3} to ${name2}`;
-                    document.getElementById("result4").innerHTML = `${name5} will give ${ans4} to ${name2}`;
+               
+                    document.getElementById("who3").innerHTML = name4;
+                    document.getElementById("owes3").innerHTML = ans3 ;
+                    document.getElementById("whom3").innerHTML = name2;
+                   
+                    document.getElementById("who4").innerHTML = name5;
+                    document.getElementById("owes4").innerHTML = ans4 ;
+                    document.getElementById("whom4").innerHTML = name2;
                 }
                 else if (money3 > mid) {
                     let ans1 = mid - money1;
@@ -913,20 +1018,27 @@ let calci = () => {
 
                     let ans4 = mid - money5;
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display="none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
                     document.getElementById("result3").style.display = "flex";
                     document.getElementById("result4").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name1;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name3;
                    
                     document.getElementById("who2").innerHTML = name2;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name3;
-                    document.getElementById("result3").innerHTML = `${name4} will give ${ans3} to ${name3}`;
-                    document.getElementById("result4").innerHTML = `${name5} will give ${ans4} to ${name3}`;
+                    
+                    document.getElementById("who3").innerHTML = name4;
+                    document.getElementById("owes3").innerHTML = ans3 ;
+                    document.getElementById("whom3").innerHTML = name3;
+                    
+                    document.getElementById("who4").innerHTML = name5;
+                    document.getElementById("owes4").innerHTML = ans4 ;
+                    document.getElementById("whom4").innerHTML = name3;
                 }
                 else if (money4 > mid) {
                     let ans1 = mid - money1;
@@ -946,20 +1058,27 @@ let calci = () => {
 
                     let ans4 = mid - money5;
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display="none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
                     document.getElementById("result3").style.display = "flex";
                     document.getElementById("result4").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name1;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name4;
                    
                     document.getElementById("who2").innerHTML = name2;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name4;
-                    document.getElementById("result3").innerHTML = `${name3} will give ${ans3} to ${name4}`;
-                    document.getElementById("result4").innerHTML = `${name5} will give ${ans4} to ${name4}`;
+                
+                    document.getElementById("who3").innerHTML = name3;
+                    document.getElementById("owes3").innerHTML = ans3 ;
+                    document.getElementById("whom3").innerHTML = name4;
+                 
+                    document.getElementById("who4").innerHTML = name5;
+                    document.getElementById("owes4").innerHTML = ans4 ;
+                    document.getElementById("whom4").innerHTML = name4;
                 }
                 else if (money5 > mid) {
                     let ans1 = mid - money1;
@@ -979,20 +1098,27 @@ let calci = () => {
 
                     let ans4 = mid - money4;
                     document.getElementById("solution").style.display = "flex";
+                    document.getElementById("equal").style.display="none";
                     document.getElementById("result").style.display = "flex";
                     document.getElementById("result2").style.display = "flex";
                     document.getElementById("result3").style.display = "flex";
                     document.getElementById("result4").style.display = "flex";
 
                     document.getElementById("who").innerHTML = name1;
-                    document.getElementById("owes").innerHTML = ans1 + ">";
+                    document.getElementById("owes").innerHTML = ans1 ;
                     document.getElementById("whom").innerHTML = name5;
                    
                     document.getElementById("who2").innerHTML = name2;
-                    document.getElementById("owes2").innerHTML = ans2 + ">";
+                    document.getElementById("owes2").innerHTML = ans2 ;
                     document.getElementById("whom2").innerHTML = name5;
-                    document.getElementById("result3").innerHTML = `${name3} will give ${ans3} to ${name5}`;
-                    document.getElementById("result4").innerHTML = `${name4} will give ${ans4} to ${name5}`;
+                    
+                    document.getElementById("who3").innerHTML = name1;
+                    document.getElementById("owes3").innerHTML = ans3 ;
+                    document.getElementById("whom3").innerHTML = name5;
+                    
+                    document.getElementById("who4").innerHTML = name4;
+                    document.getElementById("owes4").innerHTML = ans4 ;
+                    document.getElementById("whom4").innerHTML = name5;
                 }
             }
             else if (max > 1) {
@@ -1015,20 +1141,27 @@ let calci = () => {
 
                         let ans4 = money5 - mid;
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
                         document.getElementById("result4").style.display = "flex";
 
                         document.getElementById("who").innerHTML = name1;
-                        document.getElementById("owes").innerHTML = ans1 + ">";
+                        document.getElementById("owes").innerHTML = ans1 ;
                         document.getElementById("whom").innerHTML = name2;
 
                         document.getElementById("who2").innerHTML = name1;
-                        document.getElementById("owes2").innerHTML = ans2 + ">";
+                        document.getElementById("owes2").innerHTML = ans2 ;
                         document.getElementById("whom2").innerHTML = name3;
-                        document.getElementById("result3").innerHTML = `${name1} will give ${ans3} to ${name4}`;
-                        document.getElementById("result4").innerHTML = `${name1} will give ${ans4} to ${name5}`;
+                      
+                        document.getElementById("who3").innerHTML = name1;
+                        document.getElementById("owes3").innerHTML = ans3 ;
+                        document.getElementById("whom3").innerHTML = name4;
+                       
+                        document.getElementById("who4").innerHTML = name1;
+                        document.getElementById("owes4").innerHTML = ans4 ;
+                        document.getElementById("whom4").innerHTML = name5;
                     }
                     else if (money2 < mid) {
                         let ans1 = money1 - mid;
@@ -1048,20 +1181,27 @@ let calci = () => {
 
                         let ans4 = money5 - mid;
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
                         document.getElementById("result4").style.display = "flex";
 
                         document.getElementById("who").innerHTML = name2;
-                        document.getElementById("owes").innerHTML = ans1 + ">";
+                        document.getElementById("owes").innerHTML = ans1 ;
                         document.getElementById("whom").innerHTML = name1;
 
                         document.getElementById("who2").innerHTML = name2;
-                        document.getElementById("owes2").innerHTML = ans2 + ">";
+                        document.getElementById("owes2").innerHTML = ans2 ;
                         document.getElementById("whom2").innerHTML = name3;
-                        document.getElementById("result3").innerHTML = `${name2} will give ${ans3} to ${name4}`;
-                        document.getElementById("result4").innerHTML = `${name2} will give ${ans4} to ${name5}`;
+                    
+                        document.getElementById("who3").innerHTML = name2;
+                        document.getElementById("owes3").innerHTML = ans3 ;
+                        document.getElementById("whom3").innerHTML = name4;
+                        
+                        document.getElementById("who4").innerHTML = name2;
+                        document.getElementById("owes4").innerHTML = ans4 ;
+                        document.getElementById("whom4").innerHTML = name5;
                     }
                     else if (money3 < mid) {
                         let ans1 = money1 - mid;
@@ -1081,20 +1221,27 @@ let calci = () => {
 
                         let ans4 = money5 - mid;
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
                         document.getElementById("result4").style.display = "flex";
 
                         document.getElementById("who").innerHTML = name3;
-                        document.getElementById("owes").innerHTML = ans1 + ">";
+                        document.getElementById("owes").innerHTML = ans1 ;
                         document.getElementById("whom").innerHTML = name2;
 
                         document.getElementById("who2").innerHTML = name3;
-                        document.getElementById("owes2").innerHTML = ans2 + ">";
+                        document.getElementById("owes2").innerHTML = ans2 ;
                         document.getElementById("whom2").innerHTML = name2;
-                        document.getElementById("result3").innerHTML = `${name3} will give ${ans3} to ${name4}`;
-                        document.getElementById("result4").innerHTML = `${name3} will give ${ans4} to ${name5}`;
+                    
+                        document.getElementById("who3").innerHTML = name3;
+                        document.getElementById("owes3").innerHTML = ans3 ;
+                        document.getElementById("whom3").innerHTML = name4;
+                        
+                        document.getElementById("who4").innerHTML = name3;
+                        document.getElementById("owes4").innerHTML = ans4 ;
+                        document.getElementById("whom4").innerHTML = name5;
                     }
                     else if (money4 < mid) {
                         let ans1 = money1 - mid;
@@ -1114,20 +1261,27 @@ let calci = () => {
 
                         let ans4 = money5 - mid;
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
                         document.getElementById("result4").style.display = "flex";
 
                         document.getElementById("who").innerHTML = name4;
-                        document.getElementById("owes").innerHTML = ans1 + ">";
+                        document.getElementById("owes").innerHTML = ans1 ;
                         document.getElementById("whom").innerHTML = name1;
 
                         document.getElementById("who2").innerHTML = name4;
-                        document.getElementById("owes2").innerHTML = ans2 + ">";
+                        document.getElementById("owes2").innerHTML = ans2 ;
                         document.getElementById("whom2").innerHTML = name2;
-                        document.getElementById("result3").innerHTML = `${name4} will give ${ans3} to ${name3}`;
-                        document.getElementById("result4").innerHTML = `${name4} will give ${ans4} to ${name5}`;
+                       
+                        document.getElementById("who3").innerHTML = name4;
+                        document.getElementById("owes3").innerHTML = ans3 ;
+                        document.getElementById("whom3").innerHTML = name3;
+                      
+                        document.getElementById("who4").innerHTML = name4;
+                        document.getElementById("owes4").innerHTML = ans4 ;
+                        document.getElementById("whom4").innerHTML = name5;
                     }
                     else if (money5 < mid) {
                         let ans1 = money1 - mid;
@@ -1147,20 +1301,27 @@ let calci = () => {
 
                         let ans4 = money4 - mid;
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
                         document.getElementById("result4").style.display = "flex";
 
                         document.getElementById("who").innerHTML = name5;
-                        document.getElementById("owes").innerHTML = ans1 + ">";
+                        document.getElementById("owes").innerHTML = ans1 ;
                         document.getElementById("whom").innerHTML = name1;
 
                         document.getElementById("who2").innerHTML = name5;
-                        document.getElementById("owes2").innerHTML = ans2 + ">";
+                        document.getElementById("owes2").innerHTML = ans2 ;
                         document.getElementById("whom2").innerHTML = name2;
-                        document.getElementById("result3").innerHTML = `${name5} will give ${ans3} to ${name3}`;
-                        document.getElementById("result4").innerHTML = `${name5} will give ${ans4} to ${name4}`;
+                     
+                        document.getElementById("who3").innerHTML = name5;
+                        document.getElementById("owes3").innerHTML = ans3 ;
+                        document.getElementById("whom3").innerHTML = name3;
+                       
+                        document.getElementById("who4").innerHTML = name5;
+                        document.getElementById("owes4").innerHTML = ans4 ;
+                        document.getElementById("whom4").innerHTML = name4;
                     }
                 }
                 else if (max == 2) {
@@ -1191,6 +1352,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -1199,7 +1361,7 @@ let calci = () => {
                         if (ans1 <= diff1) {
 
                             document.getElementById("who").innerHTML = name3;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) {
@@ -1208,55 +1370,76 @@ let calci = () => {
                             if (diff1 < ans2) {
 
                                 document.getElementById("who2").innerHTML = name4;
-                                document.getElementById("owes2").innerHTML = diff1 + ">";
+                                document.getElementById("owes2").innerHTML = diff1 ;
                                 document.getElementById("whom2").innerHTML = name1;
                                 ans2 = ans2 - diff1;
                                 if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
                                 if (ans2 <= diff2) {
-                                    document.getElementById("result3").innerHTML = `${name4} will give ${ans2} to ${name2}`;
+                                    
+                                    document.getElementById("who3").innerHTML = name4;
+                                    document.getElementById("owes3").innerHTML = ans2 ;
+                                    document.getElementById("whom3").innerHTML = name2;
                                     diff2 = diff2 - ans2;
                                     if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                                    document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name2}`;
+                              
+                                    document.getElementById("who4").innerHTML = name5;
+                                    document.getElementById("owes4").innerHTML = ans3 ;
+                                    document.getElementById("whom4").innerHTML = name2;
                                 }
                             }
                             else {
 
                                 document.getElementById("who2").innerHTML = name4;
-                                document.getElementById("owes2").innerHTML = ans2 + ">";
+                                document.getElementById("owes2").innerHTML = ans2 ;
                                 document.getElementById("whom2").innerHTML = name1;
                                 diff1 = diff1 - ans2;
                                 if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
-                                document.getElementById("result3").innerHTML = `${name5} will give ${diff1} to ${name1}`;
+                               
+                                document.getElementById("who3").innerHTML = name5;
+                                document.getElementById("owes3").innerHTML = diff1 ;
+                                document.getElementById("whom3").innerHTML = name1;
                                 ans3 = ans3 - diff1;
                                 if (ans3 % 1 !== 0) { ans3 = ans3.toFixed(2); }
 
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name2}`;
+                               
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name2;
                             }
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name3;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name1;
                             ans1 = ans1 - diff1;
                             if (ans1 % 1 !== 0) { ans1 = ans1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name3;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name2;
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
                             if (diff2 == ans2) {
-                                document.getElementById("result3").innerHTML = `${name4} will give ${ans2} to ${name2}`;
+                             
+                                document.getElementById("who3").innerHTML = name4;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name2;
                             }
                             else {
-                                document.getElementById("result3").innerHTML = `${name4} will give ${ans2} to ${name2}`;
+                               
+                                document.getElementById("who3").innerHTML = name4;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name2;
                                 diff2 = diff2 - ans2;
                                 if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name2}`;
+                               
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name2;
                             }
 
                         }
@@ -1288,6 +1471,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -1296,7 +1480,7 @@ let calci = () => {
                         if (ans1 <= diff1) {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
@@ -1304,56 +1488,77 @@ let calci = () => {
                             if (diff1 < ans2) {
 
                                 document.getElementById("who2").innerHTML = name4;
-                                document.getElementById("owes2").innerHTML = diff1 + ">";
+                                document.getElementById("owes2").innerHTML = diff1 ;
                                 document.getElementById("whom2").innerHTML = name1;
                                 ans2 = ans2 - diff1;
                                 if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
                                 if (ans2 <= diff2) {
-                                    document.getElementById("result3").innerHTML = `${name4} will give ${ans2} to ${name3}`;
+                              
+                                    document.getElementById("who3").innerHTML = name4;
+                                    document.getElementById("owes3").innerHTML = ans2 ;
+                                    document.getElementById("whom3").innerHTML = name3;
                                     diff2 = diff2 - ans2;
                                     if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                                    document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name3}`;
+                                    
+                                    document.getElementById("who4").innerHTML = name5;
+                                    document.getElementById("owes4").innerHTML = ans3 ;
+                                    document.getElementById("whom4").innerHTML = name3;
                                 }
                             }
                             else {
 
                                 document.getElementById("who2").innerHTML = name4;
-                                document.getElementById("owes2").innerHTML = ans2 + ">";
+                                document.getElementById("owes2").innerHTML = ans2 ;
                                 document.getElementById("whom2").innerHTML = name1;
                                 diff1 = diff1 - ans2;
                                 if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
-                                document.getElementById("result3").innerHTML = `${name5} will give ${diff1} to ${name1}`;
+                                
+                                document.getElementById("who3").innerHTML = name5;
+                                document.getElementById("owes3").innerHTML = diff1 ;
+                                document.getElementById("whom3").innerHTML = name1;
                                 ans3 = ans3 - diff1;
                                 if (ans3 % 1 !== 0) { ans3 = ans3.toFixed(2); }
 
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name3}`;
+                             
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name3;
                             }
                         }
                         else {
-                            document.getElementById("result").innerHTML = `${name2} will give ${diff1} to ${name1}`;
+                           
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name1;
                             ans1 = ans1 - diff1;
                             if (ans1 % 1 !== 0) { ans1 = ans1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name2;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name3;
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
                             if (diff2 == ans2) {
-                                document.getElementById("result3").innerHTML = `${name4} will give ${ans2} to ${name3}`;
+                              
+                                document.getElementById("who3").innerHTML = name4;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name3;
                             }
                             else {
-                                document.getElementById("result3").innerHTML = `${name4} will give ${ans2} to ${name3}`;
+
+                                document.getElementById("who3").innerHTML = name3;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name3;
                                 diff2 = diff2 - ans2;
                                 if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name3}`;
+                            
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name3;
                             }
 
                         }
@@ -1385,6 +1590,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -1393,7 +1599,7 @@ let calci = () => {
                         if (ans1 <= diff1) {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
@@ -1401,56 +1607,77 @@ let calci = () => {
                             if (diff1 < ans2) {
 
                                 document.getElementById("who2").innerHTML = name3;
-                                document.getElementById("owes2").innerHTML = diff1 + ">";
+                                document.getElementById("owes2").innerHTML = diff1 ;
                                 document.getElementById("whom2").innerHTML = name1;
                                 ans2 = ans2 - diff1;
                                 if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
                                 if (ans2 <= diff2) {
-                                    document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name4}`;
+                                   
+                                    document.getElementById("who3").innerHTML = name3;
+                                    document.getElementById("owes3").innerHTML = ans2 ;
+                                    document.getElementById("whom3").innerHTML = name4;
                                     diff2 = diff2 - ans2;
                                     if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                                    document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name4}`;
+                                  
+                                    document.getElementById("who4").innerHTML = name5;
+                                    document.getElementById("owes4").innerHTML = ans3 ;
+                                    document.getElementById("whom4").innerHTML = name4;
                                 }
                             }
                             else {
 
                                 document.getElementById("who2").innerHTML = name3;
-                                document.getElementById("owes2").innerHTML = ans2 + ">";
+                                document.getElementById("owes2").innerHTML = ans2 ;
                                 document.getElementById("whom2").innerHTML = name1;
                                 diff1 = diff1 - ans2;
                                 if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
-                                document.getElementById("result3").innerHTML = `${name5} will give ${diff1} to ${name1}`;
+                                
+                                document.getElementById("who3").innerHTML = name5;
+                                document.getElementById("owes3").innerHTML = diff1 ;
+                                document.getElementById("whom3").innerHTML = name1;
                                 ans3 = ans3 - diff1;
                                 if (ans3 % 1 !== 0) { ans3 = ans3.toFixed(2); }
 
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name4}`;
+                            
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name4;
                             }
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name1;
                             ans1 = ans1 - diff1;
                             if (ans1 % 1 !== 0) { ans1 = ans1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name2;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name4;
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
                             if (diff2 == ans2) {
-                                document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name4}`;
+                               
+                                document.getElementById("who3").innerHTML = name3;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name4;
                             }
                             else {
-                                document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name4}`;
+
+                                document.getElementById("who3").innerHTML = name3;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name4;
                                 diff2 = diff2 - ans2;
                                 if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name4}`;
+                               
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name4;
                             }
 
                         }
@@ -1482,6 +1709,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -1490,7 +1718,7 @@ let calci = () => {
                         if (ans1 <= diff1) {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
@@ -1498,7 +1726,7 @@ let calci = () => {
                             if (diff1 < ans2) {
 
                                 document.getElementById("who2").innerHTML = name3;
-                                document.getElementById("owes2").innerHTML = diff1 + ">";
+                                document.getElementById("owes2").innerHTML = diff1 ;
                                 document.getElementById("whom2").innerHTML = name1;
                                 ans2 = ans2 - diff1;
                                 if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
@@ -1507,50 +1735,71 @@ let calci = () => {
                                     ans2 = ans2.toFixed(2);
                                 }
                                 if (ans2 <= diff2) {
-                                    document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name5}`;
+                                
+                                    document.getElementById("who3").innerHTML = name3;
+                                    document.getElementById("owes3").innerHTML = ans2 ;
+                                    document.getElementById("whom3").innerHTML = name5;
                                     diff2 = diff2 - ans2;
                                     if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                                    document.getElementById("result4").innerHTML = `${name4} will give ${ans3} to ${name5}`;
+                                  
+                                    document.getElementById("who4").innerHTML = name4;
+                                    document.getElementById("owes4").innerHTML = ans3 ;
+                                    document.getElementById("whom4").innerHTML = name5;
                                 }
                             }
                             else {
 
                                 document.getElementById("who2").innerHTML = name3;
-                                document.getElementById("owes2").innerHTML = ans2 + ">";
+                                document.getElementById("owes2").innerHTML = ans2 ;
                                 document.getElementById("whom2").innerHTML = name1;
                                 diff1 = diff1 - ans2;
                                 if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
-                                document.getElementById("result3").innerHTML = `${name4} will give ${diff1} to ${name1}`;
+                                
+                                document.getElementById("who3").innerHTML = name4;
+                                document.getElementById("owes3").innerHTML = diff1 ;
+                                document.getElementById("whom3").innerHTML = name1;
                                 ans3 = ans3 - diff1;
                                 if (ans3 % 1 !== 0) { ans3 = ans3.toFixed(2); }
 
-                                document.getElementById("result4").innerHTML = `${name4} will give ${ans3} to ${name5}`;
+                                
+                                document.getElementById("who4").innerHTML = name4;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name5;
                             }
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name1;
                             ans1 = ans1 - diff1;
                             if (ans1 % 1 !== 0) { ans1 = ans1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name2;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name5;
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
                             if (diff2 == ans2) {
-                                document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name5}`;
+                               
+                                document.getElementById("who3").innerHTML = name3;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name5;
                             }
                             else {
-                                document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name5}`;
+                               
+                                document.getElementById("who3").innerHTML = name3;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name5;
                                 diff2 = diff2 - ans2;
                                 if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name4} will give ${ans3} to ${name5}`;
+                                
+                                document.getElementById("who4").innerHTML = name4;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name5;
                             }
 
                         }
@@ -1581,6 +1830,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -1589,7 +1839,7 @@ let calci = () => {
                         if (ans1 <= diff1) {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name2;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
@@ -1597,56 +1847,77 @@ let calci = () => {
                             if (diff1 < ans2) {
 
                                 document.getElementById("who2").innerHTML = name4;
-                                document.getElementById("owes2").innerHTML = diff1 + ">";
+                                document.getElementById("owes2").innerHTML = diff1 ;
                                 document.getElementById("whom2").innerHTML = name2;
                                 ans2 = ans2 - diff1;
                                 if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
                                 if (ans2 <= diff2) {
-                                    document.getElementById("result3").innerHTML = `${name4} will give ${ans2} to ${name3}`;
+                                   
+                                    document.getElementById("who3").innerHTML = name4;
+                                    document.getElementById("owes3").innerHTML = ans2 ;
+                                    document.getElementById("whom3").innerHTML = name3;
                                     diff2 = diff2 - ans2;
                                     if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                                    document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name3}`;
+                                
+                                    document.getElementById("who4").innerHTML = name5;
+                                    document.getElementById("owes4").innerHTML = ans3 ;
+                                    document.getElementById("whom4").innerHTML = name3;
                                 }
                             }
                             else {
 
                                 document.getElementById("who2").innerHTML = name4;
-                                document.getElementById("owes2").innerHTML = ans2 + ">";
+                                document.getElementById("owes2").innerHTML = ans2 ;
                                 document.getElementById("whom2").innerHTML = name2;
                                 diff1 = diff1 - ans2;
                                 if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
-                                document.getElementById("result3").innerHTML = `${name5} will give ${diff1} to ${name2}`;
+                                
+                                document.getElementById("who3").innerHTML = name5;
+                                document.getElementById("owes3").innerHTML = diff1 ;
+                                document.getElementById("whom3").innerHTML = name2;
                                 ans3 = ans3 - diff1;
                                 if (ans3 % 1 !== 0) { ans3 = ans3.toFixed(2); }
 
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name3}`;
+                              
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name3;
                             }
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name2;
                             ans1 = ans1 - diff1;
                             if (ans1 % 1 !== 0) { ans1 = ans1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name1;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name3;
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
                             if (diff2 == ans2) {
-                                document.getElementById("result3").innerHTML = `${name4} will give ${ans2} to ${name3}`;
+                              
+                                document.getElementById("who3").innerHTML = name4;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name3;
                             }
                             else {
-                                document.getElementById("result3").innerHTML = `${name4} will give ${ans2} to ${name3}`;
+                             
+                                document.getElementById("who3").innerHTML = name4;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name3;
                                 diff2 = diff2 - ans2;
                                 if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name3}`;
+                                
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name3;
                             }
 
                         }
@@ -1678,6 +1949,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -1686,7 +1958,7 @@ let calci = () => {
                         if (ans1 <= diff1) {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name2;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
@@ -1694,56 +1966,77 @@ let calci = () => {
                             if (diff1 < ans2) {
 
                                 document.getElementById("who2").innerHTML = name3;
-                                document.getElementById("owes2").innerHTML = diff1 + ">";
+                                document.getElementById("owes2").innerHTML = diff1 ;
                                 document.getElementById("whom2").innerHTML = name2;
                                 ans2 = ans2 - diff1;
                                 if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
                                 if (ans2 <= diff2) {
-                                    document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name4}`;
+                              
+                                    document.getElementById("who3").innerHTML = name3;
+                                    document.getElementById("owes3").innerHTML = ans2 ;
+                                    document.getElementById("whom3").innerHTML = name4;
                                     diff2 = diff2 - ans2;
                                     if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                                    document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name4}`;
+                                  
+                                    document.getElementById("who4").innerHTML = name5;
+                                    document.getElementById("owes4").innerHTML = ans3 ;
+                                    document.getElementById("whom4").innerHTML = name4;
                                 }
                             }
                             else {
 
                                 document.getElementById("who2").innerHTML = name3;
-                                document.getElementById("owes2").innerHTML = ans2 + ">";
+                                document.getElementById("owes2").innerHTML = ans2 ;
                                 document.getElementById("whom2").innerHTML = name2;
                                 diff1 = diff1 - ans2;
                                 if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
-                                document.getElementById("result3").innerHTML = `${name5} will give ${diff1} to ${name2}`;
+                                
+                                document.getElementById("who3").innerHTML = name5;
+                                document.getElementById("owes3").innerHTML = diff1 ;
+                                document.getElementById("whom3").innerHTML = name2;
                                 ans3 = ans3 - diff1;
                                 if (ans3 % 1 !== 0) { ans3 = ans3.toFixed(2); }
 
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name4}`;
+                                
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name4;
                             }
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name2;
                             ans1 = ans1 - diff1;
                             if (ans1 % 1 !== 0) { ans1 = ans1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name1;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name4;
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
                             if (diff2 == ans2) {
-                                document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name4}`;
+                              
+                                document.getElementById("who3").innerHTML = name3;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name4;
                             }
                             else {
-                                document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name4}`;
+                                
+                                document.getElementById("who3").innerHTML = name3;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name4;
                                 diff2 = diff2 - ans2;
                                 if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name4}`;
+                               
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name4;
                             }
 
                         }
@@ -1775,6 +2068,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -1783,7 +2077,7 @@ let calci = () => {
                         if (ans1 <= diff1) {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name2;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
@@ -1791,55 +2085,75 @@ let calci = () => {
                             if (diff1 < ans2) {
 
                                 document.getElementById("who2").innerHTML = name3;
-                                document.getElementById("owes2").innerHTML = diff1 + ">";
+                                document.getElementById("owes2").innerHTML = diff1 ;
                                 document.getElementById("whom2").innerHTML = name2;
                                 ans2 = ans2 - diff1;
                                 if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
                                 if (ans2 <= diff2) {
-                                    document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name5}`;
+                                  
+                                    document.getElementById("who3").innerHTML = name3;
+                                    document.getElementById("owes3").innerHTML = ans2 ;
+                                    document.getElementById("whom3").innerHTML = name5;
                                     diff2 = diff2 - ans2;
                                     if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                                    document.getElementById("result4").innerHTML = `${name4} will give ${ans3} to ${name5}`;
+                                   
+                                    document.getElementById("who4").innerHTML = name4;
+                                    document.getElementById("owes4").innerHTML = ans3 ;
+                                    document.getElementById("whom4").innerHTML = name5;
                                 }
                             }
                             else {
 
                                 document.getElementById("who2").innerHTML = name3;
-                                document.getElementById("owes2").innerHTML = ans2 + ">";
+                                document.getElementById("owes2").innerHTML = ans2 ;
                                 document.getElementById("whom2").innerHTML = name2;
                                 diff1 = diff1 - ans2;
                                 if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
-                                document.getElementById("result3").innerHTML = `${name4} will give ${diff1} to ${name2}`;
+                                document.getElementById("who3").innerHTML = name4;
+                                document.getElementById("owes3").innerHTML = diff1 ;
+                                document.getElementById("whom3").innerHTML = name2;
                                 ans3 = ans3 - diff1;
                                 if (ans3 % 1 !== 0) { ans3 = ans3.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name4} will give ${ans3} to ${name5}`;
+                               
+                                document.getElementById("who4").innerHTML = name4;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name5;
                             }
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name2;
                             ans1 = ans1 - diff1;
                             if (ans1 % 1 !== 0) { ans1 = ans1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name1;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name5;
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
                             if (diff2 == ans2) {
-                                document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name5}`;
+                               
+                                document.getElementById("who3").innerHTML = name3;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name5;
                             }
                             else {
-                                document.getElementById("result3").innerHTML = `${name3} will give ${ans2} to ${name5}`;
+                               
+                                document.getElementById("who3").innerHTML = name3;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name5;
                                 diff2 = diff2 - ans2;
                                 if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name4} will give ${ans3} to ${name5}`;
+                               
+                                document.getElementById("who4").innerHTML = name4;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name5;
                             }
 
                         }
@@ -1871,6 +2185,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -1879,7 +2194,7 @@ let calci = () => {
                         if (ans1 <= diff1) {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name3;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
@@ -1887,56 +2202,77 @@ let calci = () => {
                             if (diff1 < ans2) {
 
                                 document.getElementById("who2").innerHTML = name2;
-                                document.getElementById("owes2").innerHTML = diff1 + ">";
+                                document.getElementById("owes2").innerHTML = diff1 ;
                                 document.getElementById("whom2").innerHTML = name3;
                                 ans2 = ans2 - diff1;
                                 if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
                                 if (ans2 <= diff2) {
-                                    document.getElementById("result3").innerHTML = `${name2} will give ${ans2} to ${name4}`;
+                                 
+                                    document.getElementById("who3").innerHTML = name2;
+                                    document.getElementById("owes3").innerHTML = ans2 ;
+                                    document.getElementById("whom3").innerHTML = name4;
                                     diff2 = diff2 - ans2;
                                     if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                                    document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name4}`;
+                                    
+                                    document.getElementById("who4").innerHTML = name5;
+                                    document.getElementById("owes4").innerHTML = ans3 ;
+                                    document.getElementById("whom4").innerHTML = name4;
                                 }
                             }
                             else {
 
                                 document.getElementById("who2").innerHTML = name2;
-                                document.getElementById("owes2").innerHTML = ans2 + ">";
+                                document.getElementById("owes2").innerHTML = ans2 ;
                                 document.getElementById("whom2").innerHTML = name3;
                                 diff1 = diff1 - ans2;
                                 if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
-                                document.getElementById("result3").innerHTML = `${name5} will give ${diff1} to ${name3}`;
+                                
+                                document.getElementById("who3").innerHTML = name5;
+                                document.getElementById("owes3").innerHTML = diff1 ;
+                                document.getElementById("whom3").innerHTML = name3;
                                 ans3 = ans3 - diff1;
                                 if (ans3 % 1 !== 0) { ans3 = ans3.toFixed(2); }
 
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name4}`;
+                            
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name4;
                             }
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name3;
                             ans1 = ans1 - diff1;
                             if (ans1 % 1 !== 0) { ans1 = ans1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name1;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name4;
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
                             if (diff2 == ans2) {
-                                document.getElementById("result3").innerHTML = `${name2} will give ${ans2} to ${name4}`;
+                            
+                                document.getElementById("who3").innerHTML = name2;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name4;
                             }
                             else {
-                                document.getElementById("result3").innerHTML = `${name2} will give ${ans2} to ${name4}`;
+                              
+                                document.getElementById("who3").innerHTML = name2;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name4;
                                 diff2 = diff2 - ans2;
                                 if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name5} will give ${ans3} to ${name4}`;
+                               
+                                document.getElementById("who4").innerHTML = name5;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name4;
                             }
 
                         }
@@ -1968,6 +2304,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -1976,7 +2313,7 @@ let calci = () => {
                         if (ans1 <= diff1) {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name3;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
@@ -1984,56 +2321,76 @@ let calci = () => {
                             if (diff1 < ans2) {
 
                                 document.getElementById("who2").innerHTML = name2;
-                                document.getElementById("owes2").innerHTML = diff1 + ">";
+                                document.getElementById("owes2").innerHTML = diff1 ;
                                 document.getElementById("whom2").innerHTML = name3;
                                 ans2 = ans2 - diff1;
                                 if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
                                 if (ans2 <= diff2) {
-                                    document.getElementById("result3").innerHTML = `${name2} will give ${ans2} to ${name5}`;
+                                    
+                                    document.getElementById("who3").innerHTML = name2;
+                                    document.getElementById("owes3").innerHTML = ans2 ;
+                                    document.getElementById("whom3").innerHTML = name5;
                                     diff2 = diff2 - ans2;
                                     if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                                    document.getElementById("result4").innerHTML = `${name4} will give ${ans3} to ${name5}`;
+                                    
+                                    document.getElementById("who4").innerHTML = name4;
+                                    document.getElementById("owes4").innerHTML = ans3 ;
+                                    document.getElementById("whom4").innerHTML = name5;
                                 }
                             }
                             else {
 
                                 document.getElementById("who2").innerHTML = name2;
-                                document.getElementById("owes2").innerHTML = ans2 + ">";
+                                document.getElementById("owes2").innerHTML = ans2 ;
                                 document.getElementById("whom2").innerHTML = name3;
                                 diff1 = diff1 - ans2;
                                 if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
-                                document.getElementById("result3").innerHTML = `${name4} will give ${diff1} to ${name3}`;
+                                document.getElementById("who3").innerHTML = name4;
+                                document.getElementById("owes3").innerHTML = diff1 ;
+                                document.getElementById("whom3").innerHTML = name3;
                                 ans3 = ans3 - diff1;
                                 if (ans3 % 1 !== 0) { ans3 = ans3.toFixed(2); }
 
-                                document.getElementById("result4").innerHTML = `${name4} will give ${ans3} to ${name5}`;
+                              
+                                document.getElementById("who4").innerHTML = name4;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name5;
                             }
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name3;
                             ans1 = ans1 - diff1;
                             if (ans1 % 1 !== 0) { ans1 = ans1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name1;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name5;
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
                             if (diff2 == ans2) {
-                                document.getElementById("result3").innerHTML = `${name2} will give ${ans2} to ${name5}`;
+                            
+                                document.getElementById("who3").innerHTML = name2;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name5;
                             }
                             else {
-                                document.getElementById("result3").innerHTML = `${name2} will give ${ans2} to ${name5}`;
+                               
+                                document.getElementById("who3").innerHTML = name2;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name5;
                                 diff2 = diff2 - ans2;
                                 if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name4} will give ${ans3} to ${name5}`;
+                               
+                                document.getElementById("who4").innerHTML = name4;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name5;
                             }
 
                         }
@@ -2065,6 +2422,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -2073,7 +2431,7 @@ let calci = () => {
                         if (ans1 <= diff1) {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name4;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
@@ -2081,55 +2439,76 @@ let calci = () => {
                             if (diff1 < ans2) {
 
                                 document.getElementById("who2").innerHTML = name2;
-                                document.getElementById("owes2").innerHTML = diff1 + ">";
+                                document.getElementById("owes2").innerHTML = diff1 ;
                                 document.getElementById("whom2").innerHTML = name4;
                                 ans2 = ans2 - diff1;
                                 if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
                                 if (ans2 <= diff2) {
-                                    document.getElementById("result3").innerHTML = `${name2} will give ${ans2} to ${name5}`;
+                                   
+                                    document.getElementById("who3").innerHTML = name2;
+                                    document.getElementById("owes3").innerHTML = ans2 ;
+                                    document.getElementById("whom3").innerHTML = name5;
                                     diff2 = diff2 - ans2;
                                     if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                                    document.getElementById("result4").innerHTML = `${name3} will give ${ans3} to ${name5}`;
+                                   
+                                    document.getElementById("who4").innerHTML = name3;
+                                    document.getElementById("owes4").innerHTML = ans3 ;
+                                    document.getElementById("whom4").innerHTML = name5;
                                 }
                             }
                             else {
 
                                 document.getElementById("who2").innerHTML = name2;
-                                document.getElementById("owes2").innerHTML = ans2 + ">";
+                                document.getElementById("owes2").innerHTML = ans2 ;
                                 document.getElementById("whom2").innerHTML = name4;
                                 diff1 = diff1 - ans2;
                                 if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
-                                document.getElementById("result3").innerHTML = `${name3} will give ${diff1} to ${name4}`;
+                                
+                                document.getElementById("who3").innerHTML = name3;
+                                document.getElementById("owes3").innerHTML = diff1 ;
+                                document.getElementById("whom3").innerHTML = name4;
                                 ans3 = ans3 - diff1;
                                 if (ans3 % 1 !== 0) { ans3 = ans3.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name3} will give ${ans3} to ${name5}`;
+                              
+                                document.getElementById("who4").innerHTML = name3;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name5;
                             }
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name4;
                             ans1 = ans1 - diff1;
                             if (ans1 % 1 !== 0) { ans1 = ans1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name1;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name5;
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
                             if (diff2 == ans2) {
-                                document.getElementById("result3").innerHTML = `${name2} will give ${ans2} to ${name5}`;
+                                
+                                document.getElementById("who3").innerHTML = name2;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name5;
                             }
                             else {
-                                document.getElementById("result3").innerHTML = `${name2} will give ${ans2} to ${name5}`;
+                            
+                                document.getElementById("who3").innerHTML = name2;
+                                document.getElementById("owes3").innerHTML = ans2 ;
+                                document.getElementById("whom3").innerHTML = name5;
                                 diff2 = diff2 - ans2;
                                 if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
-                                document.getElementById("result4").innerHTML = `${name3} will give ${ans3} to ${name5}`;
+                              
+                                document.getElementById("who4").innerHTML = name3;
+                                document.getElementById("owes4").innerHTML = ans3 ;
+                                document.getElementById("whom4").innerHTML = name5;
                             }
 
                         }
@@ -2159,6 +2538,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -2167,44 +2547,55 @@ let calci = () => {
                         if (diff1 <= ans1) {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name3;
 
                             ans1 = ans1 - diff1;
 
                             document.getElementById("who2").innerHTML = name1;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name4;
 
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                            document.getElementById("result3").innerHTML = `${name2} will give ${diff2} to ${name4}`;
+                            
+                            document.getElementById("who3").innerHTML = name2;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name4;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name2} will give ${ans2} to ${name5}`;
+                            document.getElementById("who4").innerHTML = name2;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
 
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name3;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name2;
-                            document.getElementById("owes2").innerHTML = diff1 + ">";
+                            document.getElementById("owes2").innerHTML = diff1 ;
                             document.getElementById("whom2").innerHTML = name3;
-                            document.getElementById("result3").innerHTML = `${name2} will give ${diff2} to ${name4}`;
+                            
+                            document.getElementById("who3").innerHTML = name2;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name4;
+
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name2} will give ${ans2} to ${name5}`;
+                            document.getElementById("who4").innerHTML = name2;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
                         }
                     }
                     else if (money1 < mid && money3 < mid) {
@@ -2229,6 +2620,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -2237,44 +2629,56 @@ let calci = () => {
                         if (diff1 <= ans1) {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name2;
 
                             ans1 = ans1 - diff1;
 
                             document.getElementById("who2").innerHTML = name1;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name4;
 
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                            document.getElementById("result3").innerHTML = `${name3} will give ${diff2} to ${name4}`;
+                           
+                            document.getElementById("who3").innerHTML = name3;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name4;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name3} will give ${ans2} to ${name5}`;
+                            
+                            document.getElementById("who4").innerHTML = name3;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
 
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name2;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name3;
-                            document.getElementById("owes2").innerHTML = diff1 + ">";
+                            document.getElementById("owes2").innerHTML = diff1 ;
                             document.getElementById("whom2").innerHTML = name2;
-                            document.getElementById("result3").innerHTML = `${name3} will give ${diff2} to ${name4}`;
+                            
+                            document.getElementById("who3").innerHTML = name3;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name4;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name3} will give ${ans2} to ${name5}`;
+                            
+                            document.getElementById("who4").innerHTML = name3;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
                         }
                     }
                     else if (money1 < mid && money4 < mid) {
@@ -2299,6 +2703,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -2307,44 +2712,56 @@ let calci = () => {
                         if (diff1 <= ans1) {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name2;
 
                             ans1 = ans1 - diff1;
 
                             document.getElementById("who2").innerHTML = name1;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name3;
 
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                            document.getElementById("result3").innerHTML = `${name4} will give ${diff2} to ${name3}`;
+                            
+                            document.getElementById("who3").innerHTML = name4;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name3;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name4} will give ${ans2} to ${name5}`;
+                           
+                            document.getElementById("who4").innerHTML = name4;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
 
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name2;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name4;
-                            document.getElementById("owes2").innerHTML = diff1 + ">";
+                            document.getElementById("owes2").innerHTML = diff1 ;
                             document.getElementById("whom2").innerHTML = name2;
-                            document.getElementById("result3").innerHTML = `${name4} will give ${diff2} to ${name3}`;
+                          
+                            document.getElementById("who3").innerHTML = name4;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name3;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name4} will give ${ans2} to ${name5}`;
+                            
+                            document.getElementById("who4").innerHTML = name4;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
                         }
                     }
                     else if (money1 < mid && money5 < mid) {
@@ -2369,6 +2786,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -2377,44 +2795,56 @@ let calci = () => {
                         if (diff1 <= ans1) {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name2;
 
                             ans1 = ans1 - diff1;
 
                             document.getElementById("who2").innerHTML = name1;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name3;
 
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                            document.getElementById("result3").innerHTML = `${name5} will give ${diff2} to ${name3}`;
+                            
+                            document.getElementById("who3").innerHTML = name5;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name3;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name5} will give ${ans2} to ${name4}`;
+                            
+                            document.getElementById("who4").innerHTML = name5;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name4;
 
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name1;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name2;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name5;
-                            document.getElementById("owes2").innerHTML = diff1 + ">";
+                            document.getElementById("owes2").innerHTML = diff1 ;
                             document.getElementById("whom2").innerHTML = name2;
-                            document.getElementById("result3").innerHTML = `${name5} will give ${diff2} to ${name3}`;
+                            
+                            document.getElementById("who3").innerHTML = name5;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name3;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name5} will give ${ans2} to ${name4}`;
+                          
+                            document.getElementById("who4").innerHTML = name5;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name4;
                         }
                     }
                     else if (money2 < mid && money3 < mid) {
@@ -2439,6 +2869,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -2447,44 +2878,56 @@ let calci = () => {
                         if (diff1 <= ans1) {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name1;
 
                             ans1 = ans1 - diff1;
 
                             document.getElementById("who2").innerHTML = name2;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name4;
 
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                            document.getElementById("result3").innerHTML = `${name3} will give ${diff2} to ${name4}`;
+                           
+                            document.getElementById("who3").innerHTML = name3;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name4;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name3} will give ${ans2} to ${name5}`;
+                           
+                            document.getElementById("who4").innerHTML = name3;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
 
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name3;
-                            document.getElementById("owes2").innerHTML = diff1 + ">";
+                            document.getElementById("owes2").innerHTML = diff1 ;
                             document.getElementById("whom2").innerHTML = name1;
-                            document.getElementById("result3").innerHTML = `${name3} will give ${diff2} to ${name4}`;
+                          
+                            document.getElementById("who3").innerHTML = name3;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name4;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name3} will give ${ans2} to ${name5}`;
+                            
+                            document.getElementById("who4").innerHTML = name3;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
                         }
                     }
                     else if (money2 < mid && money4 < mid) {
@@ -2509,6 +2952,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -2517,44 +2961,55 @@ let calci = () => {
                         if (diff1 <= ans1) {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name1;
 
                             ans1 = ans1 - diff1;
-                            document.getElementById("result2").innerHTML = `${name2} will give ${ans1} to ${name3}`;
+                           
                             document.getElementById("who2").innerHTML = name2;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name3;
 
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                            document.getElementById("result3").innerHTML = `${name4} will give ${diff2} to ${name3}`;
+                        
+                            document.getElementById("who3").innerHTML = name4;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name3;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name4} will give ${ans2} to ${name5}`;
+                            document.getElementById("who4").innerHTML = name4;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
 
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name4;
-                            document.getElementById("owes2").innerHTML = diff1 + ">";
+                            document.getElementById("owes2").innerHTML = diff1 ;
                             document.getElementById("whom2").innerHTML = name1;
-                            document.getElementById("result3").innerHTML = `${name4} will give ${diff2} to ${name3}`;
+                            
+                            document.getElementById("who3").innerHTML = name4;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name3;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name4} will give ${ans2} to ${name5}`;
+                            
+                            document.getElementById("who4").innerHTML = name4;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
                         }
                     }
                     else if (money2 < mid && money5 < mid) {
@@ -2579,6 +3034,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -2587,44 +3043,56 @@ let calci = () => {
                         if (diff1 <= ans1) {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name1;
 
                             ans1 = ans1 - diff1;
 
                             document.getElementById("who2").innerHTML = name2;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name3;
 
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                            document.getElementById("result3").innerHTML = `${name5} will give ${diff2} to ${name3}`;
+                           
+                            document.getElementById("who3").innerHTML = name5;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name3;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name5} will give ${ans2} to ${name4}`;
+                          
+                            document.getElementById("who4").innerHTML = name5;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name4;
 
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name2;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name5;
-                            document.getElementById("owes2").innerHTML = diff1 + ">";
+                            document.getElementById("owes2").innerHTML = diff1 ;
                             document.getElementById("whom2").innerHTML = name1;
-                            document.getElementById("result3").innerHTML = `${name5} will give ${diff2} to ${name3}`;
+                           
+                            document.getElementById("who3").innerHTML = name5;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name3;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name5} will give ${ans2} to ${name4}`;
+                          
+                            document.getElementById("who4").innerHTML = name5;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name4;
                         }
                     }
                     else if (money3 < mid && money4 < mid) {
@@ -2649,6 +3117,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -2657,44 +3126,56 @@ let calci = () => {
                         if (diff1 <= ans1) {
 
                             document.getElementById("who").innerHTML = name3;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name1;
 
                             ans1 = ans1 - diff1;
 
                             document.getElementById("who2").innerHTML = name3;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name2;
 
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                            document.getElementById("result3").innerHTML = `${name4} will give ${diff2} to ${name2}`;
+                            
+                            document.getElementById("who3").innerHTML = name4;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name2;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name4} will give ${ans2} to ${name5}`;
+                            
+                            document.getElementById("who4").innerHTML = name4;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
 
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name3;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
 
                             document.getElementById("who2").innerHTML = name4;
-                            document.getElementById("owes2").innerHTML = diff1 + ">";
+                            document.getElementById("owes2").innerHTML = diff1 ;
                             document.getElementById("whom2").innerHTML = name1;
-                            document.getElementById("result3").innerHTML = `${name4} will give ${diff2} to ${name2}`;
+                           
+                            document.getElementById("who3").innerHTML = name4;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name2;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name4} will give ${ans2} to ${name5}`;
+                           
+                            document.getElementById("who4").innerHTML = name4;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name5;
                         }
                     }
                     else if (money3 < mid && money5 < mid) {
@@ -2719,51 +3200,64 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
                         document.getElementById("result4").style.display = "flex";
 
                         if (diff1 <= ans1) {
-                            document.getElementById("result").innerHTML = `${name3} will give ${diff1} to ${name1}`;
+                           
                             document.getElementById("who").innerHTML = name3;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name1;
 
                             ans1 = ans1 - diff1;
 
                             document.getElementById("who2").innerHTML = name3;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name2;
 
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                            document.getElementById("result3").innerHTML = `${name5} will give ${diff2} to ${name2}`;
+                          
+                            document.getElementById("who3").innerHTML = name5;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name2;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name5} will give ${ans2} to ${name4}`;
+                           
+                            document.getElementById("who4").innerHTML = name5;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name4;
 
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name3;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
                             document.getElementById("who2").innerHTML = name5;
-                            document.getElementById("owes2").innerHTML = diff1 + ">";
+                            document.getElementById("owes2").innerHTML = diff1 ;
                             document.getElementById("whom2").innerHTML = name1;
-                            document.getElementById("result3").innerHTML = `${name5} will give ${diff2} to ${name2}`;
+
+                            document.getElementById("who3").innerHTML = name5;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name2;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name5} will give ${ans2} to ${name4}`;
+                            
+                            document.getElementById("who4").innerHTML = name5;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name4;
                         }
                     }
                     else if (money4 < mid && money5 < mid) {
@@ -2788,6 +3282,7 @@ let calci = () => {
                         }
 
                         document.getElementById("solution").style.display = "flex";
+                        document.getElementById("equal").style.display="none";
                         document.getElementById("result").style.display = "flex";
                         document.getElementById("result2").style.display = "flex";
                         document.getElementById("result3").style.display = "flex";
@@ -2796,43 +3291,55 @@ let calci = () => {
                         if (diff1 <= ans1) {
 
                             document.getElementById("who").innerHTML = name4;
-                            document.getElementById("owes").innerHTML = diff1 + ">";
+                            document.getElementById("owes").innerHTML = diff1 ;
                             document.getElementById("whom").innerHTML = name1;
 
                             ans1 = ans1 - diff1;
 
                             document.getElementById("who2").innerHTML = name4;
-                            document.getElementById("owes2").innerHTML = ans1 + ">";
+                            document.getElementById("owes2").innerHTML = ans1 ;
                             document.getElementById("whom2").innerHTML = name2;
 
                             diff2 = diff2 - ans1;
                             if (diff2 % 1 !== 0) { diff2 = diff2.toFixed(2); }
 
-                            document.getElementById("result3").innerHTML = `${name5} will give ${diff2} to ${name2}`;
+                         
+                            document.getElementById("who3").innerHTML = name5;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name2;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name5} will give ${ans2} to ${name3}`;
+                          
+                            document.getElementById("who4").innerHTML = name5;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name3;
 
                         }
                         else {
 
                             document.getElementById("who").innerHTML = name4;
-                            document.getElementById("owes").innerHTML = ans1 + ">";
+                            document.getElementById("owes").innerHTML = ans1 ;
                             document.getElementById("whom").innerHTML = name1;
                             diff1 = diff1 - ans1;
                             if (diff1 % 1 !== 0) { diff1 = diff1.toFixed(2); }
 
                             document.getElementById("who2").innerHTML = name5;
-                            document.getElementById("owes2").innerHTML = diff1 + ">";
+                            document.getElementById("owes2").innerHTML = diff1 ;
                             document.getElementById("whom2").innerHTML = name1;
-                            document.getElementById("result3").innerHTML = `${name5} will give ${diff2} to ${name2}`;
+                      
+                            document.getElementById("who3").innerHTML = name5;
+                            document.getElementById("owes3").innerHTML = diff2 ;
+                            document.getElementById("whom3").innerHTML = name2;
 
                             ans2 = ans2 - diff2;
                             if (ans2 % 1 !== 0) { ans2 = ans2.toFixed(2); }
 
-                            document.getElementById("result4").innerHTML = `${name5} will give ${ans2} to ${name3}`;
+                           
+                            document.getElementById("who4").innerHTML = name5;
+                            document.getElementById("owes4").innerHTML = ans2 ;
+                            document.getElementById("whom4").innerHTML = name3;
                         }
                     }
                 }
@@ -2889,7 +3396,7 @@ let calci = () => {
 let getvalue = () => {
     let money = document.getElementById("money-input1").value;
 
-    if (isNaN(money)) {
+    if (isNaN(money) || money < 0) {
         document.getElementById("rs-span1").innerHTML = "0";
     }
     else {
@@ -2897,7 +3404,7 @@ let getvalue = () => {
     }
     let money2 = document.getElementById("money-input2").value;
 
-    if (isNaN(money2)) {
+    if (isNaN(money2) || money2 < 0) {
         document.getElementById("rs-span2").innerHTML = "0";
     }
     else {
@@ -2905,7 +3412,7 @@ let getvalue = () => {
     }
     let money3 = document.getElementById("money-input3").value;
 
-    if (isNaN(money3)) {
+    if (isNaN(money3) || money3 < 0) {
         document.getElementById("rs-span3").innerHTML = "0";
     }
     else {
@@ -2913,7 +3420,7 @@ let getvalue = () => {
     }
     let money4 = document.getElementById("money-input4").value;
 
-    if (isNaN(money4)) {
+    if (isNaN(money4) || money4 < 0) {
         document.getElementById("rs-span4").innerHTML = "0";
     }
     else {
@@ -2921,7 +3428,7 @@ let getvalue = () => {
     }
     let money5 = document.getElementById("money-input5").value;
 
-    if (isNaN(money5)) {
+    if (isNaN(money5) || money5 < 0) {
         document.getElementById("rs-span5").innerHTML = "0";
     }
     else {

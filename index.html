@@ -3,19 +3,34 @@
 
 <head>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Split-Karo</title>
     <link rel="website icon" type="png" href="">
     <script src="index.js"></script>
+    <link rel="website icon" href="images/favicon-32x32.png">
 </head>
 
 <body>
+
+    <marquee scrollamount="8" direction="right">
+        <i id="sack" class="fa-solid fa-sack-dollar fa-2x"></i>
+        <i id="stairs" class="fa-solid fa-stairs fa-2x"></i>
+        <i class="fa-solid fa-plane fa-4x"></i>
+    </marquee>
     <div class="name">
+        <input type="button" id="new" value="new Bill +" onclick="window.location.reload(true)">
         <h1 id="heading">
-            hey
+            Split-Karo
         </h1>
+        <br>
+        <h5 class="subheading">
+            Enter your total expenses , we'll tell you "who owes whom" and "How much ?"
+        </h5>
     </div>
     <div class="container">
         <div class="container1">
@@ -27,7 +42,7 @@
                     <input type="button" value="-" id="count-btn-minus" onclick="minuscount()">
                     <input type="text" name="count" id="ppl-count" value="3">
                     <input type="button" value="+" id="count-btn-plus" onclick="pluscount()">
-                    <p id="warning1">Minimum : 2  / Maximum : 5</p>
+                    <p id="warning1">Minimum : 2 / Maximum : 5</p>
                 </div>
                 <div class="submit">
                     <input type="button" value="Let's GO" id="submit-btn" onclick="submit()">
@@ -35,46 +50,51 @@
             </div>
             <div class="bill1" id="bill1">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input1" placeholder="Enter Name"  autocomplete="off">
+                    <input type="text" name="Name" class="name-input" id="name-input1" placeholder="Enter Name"
+                        autocomplete="off">
                     <p id="warning"></p>
                     <input type="text" name="Money" class="money-input" id="money-input1" placeholder="How much ?"
-                        oninput="getvalue()"  autocomplete="off">
+                        oninput="getvalue()" autocomplete="off">
                     <p> Rs. <span id="rs-span1"> </span></p>
                 </form>
             </div>
             <div class="bill2" id="bill2">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input2" placeholder="Enter Name" autocomplete="off">
+                    <input type="text" name="Name" class="name-input" id="name-input2" placeholder="Enter Name"
+                        autocomplete="off">
                     <p id="warning2"></p>
                     <input type="text" name="Money" class="money-input" id="money-input2" placeholder="How much ?"
-                        oninput="getvalue()"  autocomplete="off">
+                        oninput="getvalue()" autocomplete="off">
                     <p> Rs. <span id="rs-span2"> </span></p>
                 </form>
             </div>
             <div class="bill3" id="bill3">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input3" placeholder="Enter Name" autocomplete="off">
+                    <input type="text" name="Name" class="name-input" id="name-input3" placeholder="Enter Name"
+                        autocomplete="off">
                     <p id="warning3"></p>
-                    <input type="text" name="Money" class="money-input" id="money-input3" placeholder="How much ?" oninput="getvalue()"
-                         autocomplete="off">
+                    <input type="text" name="Money" class="money-input" id="money-input3" placeholder="How much ?"
+                        oninput="getvalue()" autocomplete="off">
                     <p> Rs. <span id="rs-span3"> </span></p>
                 </form>
-            </div> 
+            </div>
             <div class="bill4" id="bill4">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input4" placeholder="Enter Name" autocomplete="off">
+                    <input type="text" name="Name" class="name-input" id="name-input4" placeholder="Enter Name"
+                        autocomplete="off">
                     <p id="warning4"></p>
-                    <input type="text" name="Money" class="money-input" id="money-input4" placeholder="How much ?" oninput="getvalue()"
-                         autocomplete="off">
+                    <input type="text" name="Money" class="money-input" id="money-input4" placeholder="How much ?"
+                        oninput="getvalue()" autocomplete="off">
                     <p> Rs. <span id="rs-span4"> </span></p>
                 </form>
             </div>
             <div class="bill5" id="bill5">
                 <form class="form1">
-                    <input type="text" name="Name" class="name-input" id="name-input5" placeholder="Enter Name" autocomplete="off">
+                    <input type="text" name="Name" class="name-input" id="name-input5" placeholder="Enter Name"
+                        autocomplete="off">
                     <p id="warning5"></p>
-                    <input type="text" name="Money" class="money-input" id="money-input5" placeholder="How much ?" oninput="getvalue()"
-                         autocomplete="off">
+                    <input type="text" name="Money" class="money-input" id="money-input5" placeholder="How much ?"
+                        oninput="getvalue()" autocomplete="off">
                     <p> Rs. <span id="rs-span5"> </span></p>
                 </form>
             </div>
@@ -85,7 +105,7 @@
                 <div id="topr">
                     Who pays whom how much:
                 </div>
-                <div id="result">  
+                <div id="result">
                     <div id="firstr">
                         <div id="who"></div>
                     </div>
